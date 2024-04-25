@@ -6,9 +6,9 @@ function MainPage() {
 
   return (
     <main className="MainPage">
-      <Header></Header>
-      <Menu></Menu>
-      <Footer></Footer>
+      <Header id="header-component"></Header>
+      <Menu id="menu-component"></Menu>
+      <Footer id="footer-component"></Footer>
     </main>
   );
 }

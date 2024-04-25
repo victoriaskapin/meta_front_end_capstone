@@ -35,7 +35,7 @@ function ReservationsForm(props) {
                 <label htmlFor="book-time">Choose time:</label>
                 <select id="book-time" value={time} onChange={e => setTime(e.target.value)} required>
                   <option value="">Select a time</option>
-                  {date && 
+                  {(date && props.availableTimes && props.availableTimes.availableTimes) && 
                     props.availableTimes.availableTimes.map(times =>{return <ListItem value={times} key={times}/>})
                   }
                 </select>
@@ -47,7 +47,7 @@ function ReservationsForm(props) {
               <div className="occasion">
                 <label htmlFor="book-occasion">Occasion:</label>
                 <select id="book-occasion" key={occasion} value={occasion} onChange={e => setOccasion(e.target.value)}>
-                  {props.occasion_list.map((occasion) => {return <ListItem value={occasion} key={occasion}/>})}
+                  {props.occasion_list && props.occasion_list.map((occasion) => {return <ListItem value={occasion} key={occasion}/>})}
                 </select>
               </div>
               <div className="btnReceive">

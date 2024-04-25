@@ -27,13 +27,13 @@ function Footer(props) {
           <div>
             <h3>Important Links</h3>
             <ul>
-              {paths.map((path) => {return <ListItem path={path} key={path} />})}
+              {paths.length && paths.map((path) => {return <ListItem path={path} key={path} />})}
             </ul>
           </div>
           <div>
             <h3>Contact</h3>
             <ul>
-              <li>Adress: <br/> 123 Siempre viva, USA</li>
+              <li>Address: <br/> 123 Siempre viva, USA</li>
               <li>Phone: <br/>  ++03 034 567</li>
               <li>Email: <br/> contact@littlelemon.com</li>
             </ul>
@@ -41,7 +41,7 @@ function Footer(props) {
           <div>
             <h3>Social Media Links</h3>
             <ul>
-              {socialLinks.map((path) => {return <ListItem path={path} key={path} />})}
+              {socialLinks.length && socialLinks.map((path) => {return <ListItem path={path} key={path} />})}
             </ul>
           </div>
         </section>

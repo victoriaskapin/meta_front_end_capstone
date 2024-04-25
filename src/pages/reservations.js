@@ -62,7 +62,7 @@ function Reservations(props) {
   return (
     <main className="Reservations">
       { !isSubmited && <ReservationsForm  occasion_list={occasion_list} availableTimes={state} dispatch={dispatch} submitForm={submitForm}/>}
-      {isSubmited && <ConfirmedReserve/>}
+      {isSubmited && <ConfirmedReserve data-testid="test-id"/>}
       <section className="previous-reservations">
           {previous_reservations.length && previous_reservations.map((reservation,i) => {return <PreviousReservations reservation={reservation} key={i}/>})}
       </section>
