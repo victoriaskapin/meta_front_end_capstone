@@ -7,11 +7,13 @@ import PreviousReservations from "../Components/PreviousReservations";
 function Reservations(props) {
   const [previous_reservations,save_reservation] = useFetchReservations();
   const filterPreviousReservations = (date,times,prev)=>{
-    prev.forEach(reservation =>{
+    if (prev.length){
+      prev.map(reservation =>{
       if(reservation.date === date && times.indexOf(reservation.time)){
         times.splice(times.indexOf(reservation.time),1)
       }
     })
+  }
     return times;
   }
   const fetchAPI = (date)=>{
